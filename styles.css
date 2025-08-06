@@ -1,0 +1,116 @@
+
+*{
+    box-sizing: border-box;
+}
+body,h1,input,div,label{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("images/uefa-champions-league-estadio-2932.jpg");
+    background-position: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1{
+    font-size: 2.3rem;
+    color:#fff
+}
+
+.pitch-container{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Soccer_Field_Transparant.svg/330px-Soccer_Field_Transparant.svg.png");
+    width: 100%;
+    height: 70dvh;
+    background-size: 104%;
+    margin-top: 20px;
+    background-position: center;
+    display: grid;
+    grid-template-areas:". . dc . ."
+                        "ei . . . ed"
+                        ". . mco . ."
+                        ". mc2 . mc1 ."
+                        "li . . . ld"
+                        ". dfc2 . dfc1 ."
+                        ". . arq . .";
+    grid-template-rows: repeat(7,1fr);
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    padding: 20px;
+}
+
+.player-container{
+    width:auto;
+    height: 50%;
+    background-color: #888;
+    border-radius: 5px;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: .8rem;
+}
+.player-container:hover{
+    opacity: .8;
+}
+.dc  { grid-area: dc; }
+.ei  { grid-area: ei; }
+.ed  { grid-area: ed; }
+.mco { grid-area: mco; }
+.mc1  { grid-area: mc1; }
+.mc2{grid-area: mc2;}
+.li  { grid-area: li; }
+.ld  { grid-area: ld; }
+.dfc1 { grid-area: dfc1; }
+.dfc2{grid-area: dfc2;}
+.arq { grid-area: arq; }
+
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 20px;
+    gap:5px;
+}
+.playerName{
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+}
+input[type="text"]~label{
+    margin-bottom: 10px;
+}
+label{
+    font-size: 1.3rem;
+    color:#555;
+    text-align: center;
+}
+.option-container{
+    display: flex;
+    justify-content: center;
+    gap:30px
+}
+
+
+@media (min-width:48rem) {
+    .pitch-container{
+        width: 35%;
+        
+    }
+    .input-container{
+        width: 30%;
+    }
+    .player-container{
+        height: 60%;
+        font-size: .8rem;
+    }
+    .playerName{
+        padding: 10px;
+    }
+}
