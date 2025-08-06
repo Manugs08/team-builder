@@ -91,6 +91,7 @@ h1{
     border: 1px solid #0096a9;
     background-color: transparent;
     color: #aaa;
+    font-size: 1rem;
 }
 .playerName::placeholder{
     color:#aaa
