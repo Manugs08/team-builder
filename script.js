@@ -10,8 +10,9 @@ playerInput.addEventListener("input",()=>{
 
 playerContainer.forEach((player)=>{
     player.addEventListener("click",()=>{
-        if(/^[a-zA-Z ]+$/.test(playerName)){
-            player.textContent=playerName
+        if(/^[a-zA-ZÁÉÍÓÚáéíóúñÑ ]+$/.test(playerName)){
+            player.textContent=playerName;
+            playerName=""
             playerInput.value=""
         } else return
         
